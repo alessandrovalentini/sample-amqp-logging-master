@@ -17,4 +17,29 @@ public class Controller {
 		return "Hello";
 	}
 
+	@RequestMapping("/log/{level}/{param}")
+	public String log(@PathVariable("level") String level, @PathVariable("param") String param) {
+
+		switch (level) {
+			case "i":
+				logger.info(param);
+				return "saved info";
+			case "d":
+				logger.debug(param);
+				return "saved debug";
+			case "t":
+				logger.trace(param);
+				return "saved trace";
+			case "w":
+				logger.warn(param);
+				return "saved warn";
+			case "e":
+				logger.error(param);
+				return "saved error";
+			default:
+				logger.info(param);
+				return "saved default info";
+		}
+	}
+
 }
