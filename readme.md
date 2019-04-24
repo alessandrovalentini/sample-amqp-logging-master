@@ -13,4 +13,4 @@ Changelog:
 ## Notes
 To run project inside your IDE please remember to change RabbitMQ address from `rabbit` (container's name) to `127.0.0.1` and to revert when building JAR to replace elk-stack `client.jar`
 
-Please note that Spring project enables only logs of level `error`, `warning`, `info`. `debug` and `trace` wil be suppressed. Change Spring configuration to allow more levels.
+Please note that Spring project enables only log level `error`, `warning`, `info`. `debug` and `trace` wil be suppressed. Change Spring configuration to allow more levels.
